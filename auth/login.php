@@ -7,7 +7,7 @@ $conn = $db->getConnection();
 
 if (isset($_POST['login'])) {
     $username = $_POST['username'];
-    $password = md5($_POST['password']); // sesuai dengan database (MD5)
+    $password = md5($_POST['password']); 
 
     $query = "SELECT * FROM users WHERE username = :username AND password = :password";
     $stmt = $conn->prepare($query);
@@ -20,7 +20,7 @@ if (isset($_POST['login'])) {
     if ($user) {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
-        header("Location: ../views/index.php"); // halaman setelah login
+        header("Location: ../public/index.php"); 
         exit;
     } else {
         $error = "Username atau password salah!";
