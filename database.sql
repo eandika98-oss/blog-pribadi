@@ -8,8 +8,8 @@ CREATE TABLE users (
 );
 
 INSERT INTO users (username, password)
-VALUES
-  ('admin', 'admin123');
+VALUES ('admin', MD5('admin123'));
+
 
 CREATE TABLE posts (
     id INT AUTO_INCREMENT PRIMARY KEY,
