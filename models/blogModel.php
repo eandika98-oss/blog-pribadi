@@ -17,4 +17,24 @@ class BlogModel {
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+      // Ambil post berdasarkan ID
+    public function getById($id) {
+        $query = "SELECT * FROM posts WHERE id = :id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute([':id' => $id]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    // Tambah post baru
+    public function insert($data) {
+        $query = "INSERT INTO posts (judul, deskripsi, konten, gambar)
+                  VALUES (:judul, :deskripsi, :konten, :gambar)";
+        $stmt = $this->conn->prepare($query);
+        return $stmt->execute([
+            ':judul' => $data['judul'],
+            ':deskripsi' => $data['deskripsi'],
+            ':konten' => $data['konten'],
+            ':gambar' => $data['gambar']
+        ]);
+    }
 }
