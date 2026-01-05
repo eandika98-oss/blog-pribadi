@@ -44,6 +44,10 @@ if (isset($_POST['login'])) {
     <form action="login.php" method="POST">
       <h1>Login</h1>
 
+      <?php if(isset($error)) : ?>
+         <p style="color:red; text-align:center; margin-bottom:10px;"><?php echo $error; ?></p>
+      <?php endif; ?>
+
       <div class="input-box">
         <input type="text" name="username" placeholder="Username" required>
         <i class='bx bxs-user'></i>
