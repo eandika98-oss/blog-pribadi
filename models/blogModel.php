@@ -37,4 +37,28 @@ class BlogModel {
             ':gambar' => $data['gambar']
         ]);
     }
+    // Edit post
+    public function update($id, $data) {
+        $query = "UPDATE posts
+                  SET judul = :judul,
+                      deskripsi = :deskripsi,
+                      konten = :konten,
+                      gambar = :gambar
+                  WHERE id = :id";
+        $stmt = $this->conn->prepare($query);
+        return $stmt->execute([
+            ':judul' => $data['judul'],
+            ':deskripsi' => $data['deskripsi'],
+            ':konten' => $data['konten'],
+            ':gambar' => $data['gambar'],
+            ':id' => $id
+        ]);
+    }
+
+    // Hapus post
+    public function delete($id) {
+        $query = "DELETE FROM posts WHERE id = :id";
+        $stmt = $this->conn->prepare($query);
+        return $stmt->execute([':id' => $id]);
+    }
 }
