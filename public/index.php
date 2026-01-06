@@ -60,7 +60,7 @@ $posts = $stmt->fetchAll();
                         <td><?= htmlspecialchars($post['deskripsi']) ?></td>
                         <td><?= htmlspecialchars($post['created_at']) ?></td>
                         <td>
-                            <a href="update.php?id=<?= $post['id'] ?>" class="action-edit">Edit</a>
+                            <a href="edit.php?id=<?= $post['id'] ?>" class="action-edit">Edit</a>
                             <a href="delete.php?id=<?= $post['id'] ?>" 
                                class="action-delete"
                                onclick="return confirm('Yakin ingin hapus post ini?')">
