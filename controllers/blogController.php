@@ -12,7 +12,7 @@ class BlogController {
     public function __construct($db) {
         $this->model = new BlogModel($db);
     }
-    
+
     // Menampilkan seluruh post
     public function index() {
         return $this->model->getAll();
@@ -38,3 +38,4 @@ class BlogController {
         return $this->model->delete($id);
     }
 }
+

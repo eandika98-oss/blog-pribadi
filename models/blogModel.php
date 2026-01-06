@@ -17,7 +17,8 @@ class BlogModel {
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
-      // Ambil post berdasarkan ID
+
+    // Ambil post berdasarkan ID
     public function getById($id) {
         $query = "SELECT * FROM posts WHERE id = :id";
         $stmt = $this->conn->prepare($query);
@@ -37,6 +38,7 @@ class BlogModel {
             ':gambar' => $data['gambar']
         ]);
     }
+
     // Edit post
     public function update($id, $data) {
         $query = "UPDATE posts
