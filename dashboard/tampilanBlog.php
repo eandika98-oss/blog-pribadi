@@ -34,7 +34,6 @@ $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="content">
                         <h3><?= htmlspecialchars($post['judul']) ?></h3>
                         <p><?= htmlspecialchars($post['deskripsi']) ?></p>
-                        <p><?= htmlspecialchars($post['konten']) ?></p>
                     </div>
 
                 </div>
