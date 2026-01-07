@@ -63,7 +63,7 @@ Implementasi fitur berdasarkan modul yang telah dikembangkan:
 Berikut adalah susunan file dan folder dalam proyek ini:
 
 ```text
-/projek-buku-alamat
+/projek-blog-pribadi
 │
 ├── /auth
 │   ├── login.php          
@@ -87,9 +87,12 @@ Berikut adalah susunan file dan folder dalam proyek ini:
 |   └── delete.php  
 |   └── edit.php
 |   └── update.php
+|   └── /css
+|       └── sytle.css
 |  
 ├── /dashboard
-|   └── tampilanBlog.php  
+|   └── tampilanBlog.php
+|   └── sytle.css
 |            
 ├── /uploads              
 ├── database.sql                              

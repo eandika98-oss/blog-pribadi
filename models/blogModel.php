@@ -12,7 +12,7 @@ class BlogModel {
 
     // Ambil semua post
     public function getAll() {
-        $query = "SELECT * FROM posts ORDER BY created_at DESC";
+        $query = "SELECT * FROM posts ORDER BY created_at ASC";
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);

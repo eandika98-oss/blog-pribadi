@@ -5,7 +5,7 @@ $database = new Database();
 $pdo = $database->getConnection();
 
 // Ambil data post
-$stmt = $pdo->query("SELECT * FROM posts ORDER BY created_at DESC");
+$stmt = $pdo->query("SELECT * FROM posts ORDER BY created_at ASC");
 $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
