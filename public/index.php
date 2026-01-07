@@ -32,6 +32,7 @@ $posts = $stmt->fetchAll();
     <h1>Daftar Post Blog</h1>
 
     <a href="create.php" class="top-btn">Tambah Post</a>
+    <a href="/dashboard/tampilanBlog.php" class="top-btn">My Blog</a>
 
     <table class="table-blog">
         <thead>
