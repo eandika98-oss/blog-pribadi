@@ -1,5 +1,5 @@
 <?php
-require_once _DIR_ . '/../models/blogModel.php';
+require_once __DIR__ . '/../models/blogModel.php';
 
 // Class BlogController berfungsi sebagai CONTROLLER
 // untuk menghubungkan model dengan tampilan
