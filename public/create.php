@@ -48,3 +48,39 @@ if (isset($_POST['submit'])) {
     }
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Post Baru</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Tambah Post Baru</h1>
+
+    <?php if(isset($error)) echo "<p style='color:red;'>$error</p>"; ?>
+
+    <form action="create.php" method="POST" enctype="multipart/form-data">
+        <label>Judul:</label><br>
+        <input type="text" name="judul" required><br><br>
+
+        <label>Deskripsi:</label><br>
+        <textarea name="deskripsi" required></textarea><br><br>
+
+        <label>Konten:</label><br>
+        <textarea name="konten" required></textarea><br><br>
+
+        <label>Gambar:</label><br>
+        <input type="file" name="gambar"><br><br>
+
+        <button type="submit" name="submit">Simpan Post</button>
+    </form>
+
+    <br>
+    <a href="index.php">Kembali ke Daftar Post</a>
+</div>
+</body>
+<html>
