@@ -34,7 +34,7 @@ Pembagian tugas dalam project ini dibagi berdasarkan mstruktur dan fungsi blog-p
 Alat dan teknologi yang digunakan dalam pengembangan proyek ini:
 
 * **Bahasa Pemrograman:** PHP-8.4.13, HTML5, CSS3, **Boxicons (Icon Library)**.
-* **Sistem Operasi:** Windows (menyesuaikan perangkat masing-masing anggota).
+* **Sistem Operasi:** Windows.
 * **Database:** MySQL.
 * **Web Server:** PHP Built-in Web Server.
 * **Database Driver:** PHP PDO (PHP Data Objects).
@@ -63,7 +63,7 @@ Implementasi fitur berdasarkan modul yang telah dikembangkan:
 Berikut adalah susunan file dan folder dalam proyek ini:
 
 ```text
-/projek-blog-pribadi
+/blog-pribadi
 │
 ├── /auth
 │   ├── login.php          
@@ -93,7 +93,8 @@ Berikut adalah susunan file dan folder dalam proyek ini:
 ├── /dashboard
 |   └── tampilanBlog.php
 |   └── sytle.css
-|            
+|   └── pl.jpg
+|              
 ├── /uploads              
 ├── database.sql                              
 └── README.md                     
@@ -104,7 +105,7 @@ Langkah-langkah menjalankan project:
 
 1. **Persiapan Database**
 * Buka aplikasi manajemen database (MySQL).
-* Impor file `database.sql` yang disertakan dalam folder proyek untuk membuat database `blog_pribadi` yang telah disiapkan beserta data dummy awal.
+* Impor file `database.sql` yang disertakan dalam folder proyek untuk membuat database `blog_pribadi` yang telah disiapkan.
 
 
 2. **Konfigurasi Koneksi**
@@ -112,9 +113,9 @@ Langkah-langkah menjalankan project:
 * Sesuaikan konfigurasi database dengan server lokal Anda:
 ```php
 const DB_HOST = 'localhost';
+const DB_NAME = 'blog_pribadi';
 const DB_USER = 'root';       // sesuaikan dengan user MySQL
 const DB_PASS = '';           // Sesuaikan dengan password MySQL 
-const DB_NAME = 'blog_pribadi';
 
 ```
 
@@ -124,4 +125,4 @@ const DB_NAME = 'blog_pribadi';
 * Setelah itu tambahkakan file yang ingin di jalankan, misalnya `php -S localhost:8000/public/index.php` di browser.
 
 ## Catatan Pengembangan
-Project ini masih berada pada tahap awal pengembangan (inisiasi dan perancangan). Implementasi fitur CRUD secara lengkap akan dilakukan pada tahap pengembangan selanjutnya sesuai dengan rencana yang telah disusun oleh anggota kelompok.
+Project ini masih berada pada tahap awal pengembangan (inisiasi dan perancangan). Khusus pada autentikasi, perlu dicatat bahwa fitur Registrasi, Remember Me, dan Forgot Password saat ini belum diimplementasikan secara fungsional di sisi backend.

@@ -2,9 +2,9 @@
 // database config
 class Database {
     public $host = "localhost";
-    public $db_name = "blog_pribadi";    // sesuaikan dengan nama database yang sudah dibuat
+    public $db_name = "blog_pribadi";    
     public $username = "root";           // sesuaikan dengan user MySQL
-    public $password = "rusdiana87";     // sesuaikan dengan password MySQL 
+    public $password = " ";              // sesuaikan dengan password MySQL 
     public $conn;
      // Fungsi untuk koneksi database
     public function getConnection() {
